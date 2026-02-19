@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tiger Fan Site | Animal Habitat</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
 <header class="header">
-    <div class="container">
+    <div class="container header__top">
         <div class="brand">
             <h1>Tiger Fan Site</h1>
         </div>
 
+        <form id="site_search_form" class="site-search" role="search" action="#">
+            <label class="visually-hidden" for="site_search_input">Search the site</label>
+            <input
+                id="site_search_input"
+                class="site-search__input"
+                type="search"
+                inputmode="search"
+                autocomplete="off"
+                placeholder="Search: food, home, cubs"
+                aria-controls="site_search_results"
+                aria-expanded="false"
+            >
+            <ul id="site_search_results" class="site-search__results" hidden></ul>
+        </form>
+    </div>
+
+    <div class="container">
         <nav class="nav" aria-label="Site navigation">
             <a href="index.html">Home</a>
             <a href="gallery.html">Image Gallery</a>

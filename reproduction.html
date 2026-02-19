@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tiger Fan Site | Mating and Reproduction Information</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
 <header class="header">
-    <div class="container">
+    <div class="container header__top">
         <div class="brand">
             <h1>Tiger Fan Site</h1>
         </div>
 
+        <form id="site_search_form" class="site-search" role="search" action="#">
+            <label class="visually-hidden" for="site_search_input">Search the site</label>
+            <input
+                id="site_search_input"
+                class="site-search__input"
+                type="search"
+                inputmode="search"
+                autocomplete="off"
+                placeholder="Search: food, home, cubs"
+                aria-controls="site_search_results"
+                aria-expanded="false"
+            >
+            <ul id="site_search_results" class="site-search__results" hidden></ul>
+        </form>
+    </div>
+
+    <div class="container">
         <nav class="nav" aria-label="Site navigation">
             <a href="index.html">Home</a>
             <a href="gallery.html">Image Gallery</a>
@@ -30,10 +48,10 @@
     <div class="container">
         <section class="card">
             <h2>Mating and Reproduction Information</h2>
-            <p>Tigers can mate year round, with a stronger peak reported between November and April. Tigers are mostly solitary, so mating happens when territories overlap.</p>
+            <p>Tigers can mate year round. Cubs are usually born after about three months.</p>
 
             <figure class="figure">
-                <img src="images/reproduction.jpg" alt="reproduction">
+                <img src="images/reproduction.jpg" alt="Tiger family">
                 <figcaption class="caption">Tiger family.</figcaption>
             </figure>
         </section>
@@ -41,20 +59,15 @@
         <section class="card">
             <h3>Key points</h3>
             <ul class="list">
-                <li>A tigress is in oestrus for a few days, with intervals of several weeks between cycles.</li>
-                <li>Gestation lasts around or over three months.</li>
-                <li>Litters can be up to seven cubs, but two or three is more typical.</li>
-                <li>Cubs stay with their mother for about two years, then leave to establish their own ranges.</li>
+                <li>Baby tigers are called cubs.</li>
+                <li>Cubs are usually born in a hidden, safe place.</li>
+                <li>The mother tiger feeds and protects the cubs.</li>
+                <li>When cubs grow up, they leave to find their own home.</li>
             </ul>
         </section>
     </div>
 </main>
 
-
-A tigress is in oestrus for a few days, with intervals of several weeks between cycles.
-Gestation lasts around or over three months.
-Litters can be up to seven cubs, but two or three is more typical.
-Cubs stay with their mother for about two years, then leave to establish their own ranges.
 <footer class="footer">
     <div class="container">Note: This website was created for educational purposes.</div>
 </footer>
