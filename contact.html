@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiger Fan Site | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="search.js" defer></script>
+    <script src="email.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <div class="container header__top">
+        <div class="brand">
+            <h1>Tiger Fan Site</h1>
+        </div>
+
+        <form id="site_search_form" class="site-search" role="search" action="#">
+            <label class="visually-hidden" for="site_search_input">Search the site</label>
+            <input
+                id="site_search_input"
+                class="site-search__input"
+                type="search"
+                inputmode="search"
+                autocomplete="off"
+                placeholder="Search: food, home, cubs"
+                aria-controls="site_search_results"
+                aria-expanded="false"
+            >
+            <ul id="site_search_results" class="site-search__results" hidden></ul>
+        </form>
+    </div>
+
+    <div class="container">
+        <nav class="nav" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Image Gallery</a>
+            <a href="habitat.html">Habitat</a>
+            <a href="classification.html">Scientific Name and Classification</a>
+            <a href="diet.html">Diet Information</a>
+            <a href="reproduction.html">Mating and Reproduction Information</a>
+            <a href="anatomy.html">Anatomy and Biology</a>
+            <a href="behavior.html">Behavior</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <section class="card">
+            <h2>Email form</h2>
+            <p>This form opens your email app and creates a message to the site owner.</p>
+        </section>
+
+        <section class="card">
+            <form class="email_form" id="email_form" novalidate>
+                <div class="field">
+                    <label for="ef_name">Your name</label>
+                    <input id="ef_name" name="name" class="input" type="text" autocomplete="name" maxlength="60" aria-describedby="ef_name_err" required>
+                    <p class="field_error" id="ef_name_err" hidden>Please type your name.</p>
+                </div>
+
+                <div class="field">
+                    <label for="ef_email">Your email</label>
+                    <input id="ef_email" name="email" class="input" type="email" inputmode="email" autocomplete="email" aria-describedby="ef_email_err" required>
+                    <p class="field_error" id="ef_email_err" hidden>Please enter a valid email address.</p>
+                </div>
+
+                <div class="field">
+                    <label for="ef_subject">Subject</label>
+                    <input id="ef_subject" name="subject" class="input" type="text" maxlength="90" aria-describedby="ef_subject_err" required>
+                    <p class="field_error" id="ef_subject_err" hidden>Subject is required.</p>
+                </div>
+
+                <div class="field">
+                    <label for="ef_message">Message</label>
+                    <textarea id="ef_message" name="message" class="input textarea" rows="5" maxlength="800" aria-describedby="ef_message_err" required></textarea>
+                    <p class="field_error" id="ef_message_err" hidden>Please type your message.</p>
+                </div>
+
+                <div class="form_actions">
+                    <button class="btn btn_primary" type="submit">Submit</button>
+                    <p class="small form_hint" id="ef_hint" aria-live="polite"></p>
+                </div>
+
+                <noscript>
+                    <p class="field_error">JavaScript is disabled. This form needs JavaScript to open the email app.</p>
+                </noscript>
+            </form>
+        </section>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">Note: This website was created for educational purposes.</div>
+</footer>
+</body>
+</html>
